@@ -1,0 +1,13 @@
+<!-- update.html -->
+{% extends 'update-data-student.html' %}
+
+{% block content %}
+<div class="container">
+  <h2>Update Student Data</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update</button>
+  </form>
+</div>
+{% endblock %}
